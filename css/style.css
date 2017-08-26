@@ -33,7 +33,7 @@ p {margin: 0 0 20px;}
 
 a {color: #fff;-webkit-transition: all .2s ease-in-out;-moz-transition: all .2s ease-in-out;transition: all .2s ease-in-out;}
 a:hover,
-a:focus {text-decoration: none;color:#65C5AA;}
+a:focus {text-decoration: none; color: white;}
 
 button {border: none;outline: 0;}
 ul li{list-style: none;}
@@ -92,11 +92,11 @@ header.main-header:before{
 }
 
 header.main-header:after{
-  background-color: rgba(25,41,52, 0.85);
-  background: -webkit-linear-gradient(rgba(25,41,52, 0.85), rgba(25,41,52, 1)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(25,41,52, 0.85), rgba(25,41,52, 1)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(25,41,52, 0.85), rgba(25,41,52, 1)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(25,41,52, 0.85), rgba(25,41,52, 1)); /* Standard syntax */
+  background-color: rgba(33, 55, 75, 0.85);
+  background: -webkit-linear-gradient(rgba(33, 55, 75, 0.85), rgba(33, 55, 75, 1)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(33, 55, 75, 0.85), rgba(33, 55, 75, 1)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(33, 55, 75, 0.85), rgba(33, 55, 75, 1)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(33, 55, 75, 0.85), rgba(33, 55, 75, 1)); /* Standard syntax */
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100%;
@@ -451,5 +451,5 @@ footer .bottom-footer .link{margin-top: 10px;}
 
 
 .landingLogo {
-  width: 30vw;
+  width: 40vw;
 }
