@@ -1,1 +1,1 @@
-console.log('bounty.network start')
+// console.log('bounty.network start')

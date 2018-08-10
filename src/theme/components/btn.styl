@@ -1,0 +1,45 @@
+
+//
+// buttons
+//
+
+.btn
+  padding 0.8rem 1.6rem
+  text-decoration none
+  border-radius 3px
+  font-size 0.9rem
+  img
+    margin-right $spacing-small
+  &.white
+    background-color white
+    border 1px solid #E0E0E0
+    color #262626
+  &.orange
+    background-color #FBAA31
+    color white
+
+.watercolor-btn
+  display block
+  height 100px
+  width 100px
+  background white
+  border 1px solid #e0e0e0
+  border-radius 20px
+  text-align center
+  line-height 100px
+  transform rotate(45deg)
+  margin 50px
+  transition all 0.25s ease-in-out
+  box-shadow 2px 2px 4px 0px #e0e0e0
+  .link
+    display block
+    color blue
+    text-decoration none
+    transform rotate(-45deg)
+    transition all 0.25s ease-in-out
+  &:hover
+    background-color purple
+    transform rotate(90deg)
+    .link
+      transform rotate(-90deg)
+      color white

@@ -1,5 +1,10 @@
 
+// https://flexboxgrid.com/
 @require '../node_modules/flexboxgrid/dist/flexboxgrid.css'
+
+//
+// configuration
+//
 
 $color-background = #FFFFFF
 $color-sep = rgb(224, 224, 224)
@@ -8,6 +13,10 @@ $color-link = #4a93ff
 $spacing-small = 0.3rem
 $spacing-medium = 0.6rem
 $spacing-large = 1.2rem
+
+//
+// fonts
+//
 
 @font-face
   font-family poppins
@@ -19,14 +28,7 @@ $spacing-large = 1.2rem
      url(/fonts/inter-ui-regular.ttf) format('ttf'),
      url(/fonts/inter-ui-regular.otf) format('otf')
 
-body
-  background-color $color-background
-  margin 0
-
-#bounty-network-outer *
-  font-family inter-ui
-
-#bounty-network-outer
+headings()
   h1
   h2
   h3
@@ -34,86 +36,35 @@ body
   h5
   h6
     font-family poppins
+  h1
+    font-size 3rem
 
-#top-menu-outer
-  border-bottom 1px solid $color-sep
+ui-fonts()
+  font-family inter-ui, 'Helvetica Neue', Helvetica, sans-serif
+  color #403656
 
-#top-menu-inner
-  display flex
-  align-items flex-end
+//
+// global / tag level modifications
+//
 
-#top-menu-logo
-  flex 0.5
-  margin $spacing-medium
+body
+  background-color $color-background
+  margin 0
 
-#top-menu-links
-  flex 0.5
-  a
-    display inline-block
-    color rgb(168, 168, 168)
-    text-decoration none
-    border-color transparent
-    border-style solid
-    border-width 0 0 4px 0
-    padding $spacing-large $spacing-small
-    margin-left $spacing-large
-    font-size 90%
-    &.active
-      color $color-link
-      border-color #4a93ff
+img
+  vertical-align middle
 
-#top-menu-toggler
-#top-menu-checkbox
-  display none
+//
+// components
+//
 
-#top-menu-toggler
-  cursor pointer
-  .line
-    height 1px
-    border-bottom 2px solid $color-link
-    margin-bottom 2px
-    width 19px
+@import 'theme/components/btn'
 
-@media screen and (max-width: 760px)
-  #top-menu-inner
-    align-items center
-
-  #top-menu-toggler
-    display flex
-
-  #top-menu-links
-    height 0px
-    overflow hidden
-    transition height 0.3s
-
-  #top-menu-checkbox:checked + div
-    display flex
-    height 300px
-    flex-direction column
-
-
-.watercolor-btn
-  display block
-  height 100px
-  width 100px
-  background white
-  border 1px solid #e0e0e0
-  border-radius 20px
-  text-align center
-  line-height 100px
-  transform rotate(45deg)
-  margin 50px
-  transition all 0.25s ease-in-out
-  box-shadow 2px 2px 4px 0px #e0e0e0
-  .link
-    display block
-    color blue
-    text-decoration none
-    transform rotate(-45deg)
-    transition all 0.25s ease-in-out
-  &:hover
-    background-color purple
-    transform rotate(90deg)
-    .link
-      transform rotate(-90deg)
-      color white
+//
+// content sections
+//
+@import 'theme/sections/top-menu'
+@import 'theme/sections/intro'
+@import 'theme/sections/building-blocks'
+@import 'theme/sections/partnerships'
+@import 'theme/sections/bottom'

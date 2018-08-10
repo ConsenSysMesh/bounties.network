@@ -1,0 +1,62 @@
+
+//
+// introducing bounties.network
+// changing the way we collaborate
+//
+
+#intro
+  position relative
+  headings()
+
+// top left hex icon with background
+#intro-top-left-hexagon
+  display none
+  position absolute
+  top 1.6rem
+  left -40px
+  width 150px
+  height 150px
+
+// top left light purple glow
+#intro-top-left-purple-light
+  display none
+  position absolute
+  top 3.7rem
+  left 40px
+  width 200px
+  height 200px
+
+// desktop version hexagons and bees to the right
+#intro-hexagons-right
+  position absolute
+  right 0
+
+// "Changing the way we collaborate."
+#intro-description
+  margin-top 8rem
+  flex 0.4
+  justify-self flex-start
+  margin-right auto
+  text-align left
+  p
+    font-size 1.2rem
+    margin-bottom 3rem
+  .btn
+    margin $spacing-medium
+
+@media screen and (max-width: 760px)
+  #intro-description
+    flex 0.7
+    justify-self center
+    margin-left auto
+    margin-right auto
+    text-align center
+
+
+  #intro-hexagons-right
+    display none
+
+  #intro-top-left-hexagon
+  #intro-top-left-purple-light
+    display block
+

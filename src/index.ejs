@@ -79,29 +79,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <% } %>
 
-<div id="bounty-network-outer">
 <div id="top-menu-outer">
-  <div id="top-menu-inner" class="row center-xs">
-  	<a id="top-menu-logo" href="/"><img src="/img/header-logo.svg" alt="bounties.network"></a>
-    <label id="top-menu-toggler" for="top-menu-checkbox">
-    	<div id="top-menu-hamburger">
-    		<div class="line"></div>
-      	<div class="line"></div>
-      	<div class="line"></div>
-    	</div>
-    </label>
-    <input id="top-menu-checkbox" type="checkbox">
-    <div id="top-menu-links">
-			<a href="#about" class="active">About</a>
-			<a href="#how-it-works">How it works</a>
-			<a href="https://medium.com/bounties-network" target="_blank">Blog</a>
-			<a href="https://beta.bounties.network" target="_blank">Login</a>
+  <div class="container">
+    <div id="top-links-row" class="row bottom-xs">
+      <div class="col-xs">
+        <a id="top-menu-logo" href="/">
+          <img src="/img/header-logo.svg" alt="bounties.network">
+        </a>
+      </div>
+      <div id="top-links-outer" class="col-xs">
+        <div class="row end-xs">
+          <input id="top-menu-checkbox" type="checkbox">
+          <div id="top-menu-links" class="col-xs first-xs">
+            <a href="#about" class="active">About</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="https://medium.com/bounties-network" target="_blank">Blog</a>
+            <a href="https://beta.bounties.network" target="_blank">Login</a>
+          </div>
+          <label id="top-menu-toggler" for="top-menu-checkbox" class="col-xs-1 last-xs">
+            <div id="top-menu-hamburger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div id="top-menu-arrow">↑</div>
+          </label>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<div id="intro" class="container">
+  <img id="intro-top-left-hexagon" src="/img/mobile/intro-top-left-hexagon.svg" alt="">
+  <img id="intro-top-left-purple-light" src="/img/mobile/intro-top-left-purple-light.svg" alt="">
+  <img id="intro-hexagons-right" src="/img/hexagons.svg" alt="">
+  <div class="container">
+    <div class="row center-xs">
+      <div id="intro-description" class="col-xs">
+        <h1>Changing the way we collaborate.</h1>
+        <p>
+          The Bounties Network empowers humans to incentivize and self-organize,
+          from freelancing to grassroots social action, and anything in between.
+        </p>
+        <a href="https://beta.bounties.network" class="btn orange">
+          Explore bounties
+        </a>
+        <a class="btn white" href="https://join.slack.com/t/bountiesnetwork/shared_invite/enQtMzA2Mjk3MzAzODQwLTZjN2UxMmU5MWYxZTVmMmM4OGNjZDRiMDgwYTVhOTIwYmQ4MjVlMjNkZjYzOTE4MWI4OTFhOWE4ZTUzN2MyNWY">
+          <img src="/img/social/slack.svg" alt="">Jour our slack
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="/index.js"></script>
+
+<% if (dev === true) { %>
+<script async id="__bs_script__" src="http://127.0.0.1:9924/browser-sync/browser-sync-client.js?v=2.23.6"></script>
+<% } %>
 
 </body>
 </html>
