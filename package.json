@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "The Bounties Network",
   "private": true,
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "^7.0.0-beta.56",
     "@babel/preset-env": "^7.0.0-beta.56",
     "babel-loader": "^8.0.0-beta.4",
@@ -32,6 +32,8 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
+    "eslint": "eslint --cache --fix src || true",
+    "prettier": "prettier --config prettier.config.js --write src/**/*.js",
     "dev-gulp": "gulp dev || true",
     "dev-http-server": "http-server dist -c-1 -p 9923 -a 127.0.0.1 -s",
     "dev": "run-p dev-*",
