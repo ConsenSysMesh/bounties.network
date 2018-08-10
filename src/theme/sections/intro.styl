@@ -30,6 +30,7 @@
 #intro-hexagons-right
   position absolute
   right 0
+  z-index 100
 
 // "Changing the way we collaborate."
 #intro-description
@@ -38,12 +39,35 @@
   justify-self flex-start
   margin-right auto
   text-align left
+  z-index 200
+  flex-direction column
   p
     font-size 1.2rem
     margin-bottom 3rem
     color #403656
   .btn
+    display inline-block
     margin $spacing-medium
+    flex 1
+
+@media screen and (max-width: 1199px)
+  #intro-hexagons-right
+    top 20%
+    width 600px
+
+@media screen and (max-width: 1122px)
+  #intro-description
+    flex 0.5
+
+  #intro-hexagons-right
+    // top 20%
+    height 700px
+
+@media screen and (max-width: 1020px)
+  #intro-hexagons-right
+    // top 28%
+    // width 380px
+    height 600px
 
 @media screen and (max-width: 760px)
   #intro-description
