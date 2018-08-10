@@ -20,10 +20,10 @@ let opts = {
   useTabs: false,
   semi: false,
   singleQuote: true,
-  trailingComma: "none",
+  trailingComma: 'none',
   bracketSpacing: false,
-  arrowParens: "avoid",
-  proseWrap: "never"
+  arrowParens: 'avoid',
+  proseWrap: 'never'
 }
 
 module.exports = opts

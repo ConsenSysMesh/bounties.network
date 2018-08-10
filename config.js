@@ -3,6 +3,7 @@ let dev = NODE_ENV === 'development'
 let prd = NODE_ENV === 'production'
 
 let opts = {
+  dev,
   prd
 }
 

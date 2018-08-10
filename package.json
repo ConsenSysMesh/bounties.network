@@ -7,6 +7,7 @@
     "@babel/core": "^7.0.0-beta.56",
     "@babel/preset-env": "^7.0.0-beta.56",
     "babel-loader": "^8.0.0-beta.4",
+    "browser-sync": "^2.23.6",
     "eslint": "^5.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.2",
@@ -19,10 +20,8 @@
     "gulp-if": "^2.0.2",
     "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.3.0",
-    "gulp-run": "^1.7.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-stylus": "^2.7.0",
-    "http-server": "^0.11.1",
     "nodemon": "^1.18.2",
     "npm-run-all": "^4.1.3",
     "prettier": "^1.13.7",
@@ -32,12 +31,14 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "eslint": "eslint --cache --fix src || true",
-    "prettier": "prettier --config prettier.config.js --write src/**/*.js",
+    "eslint": "eslint --cache --fix gulpfile.js config.js prettier.config.js webpack.config.js src || true",
+    "prettier": "prettier --config prettier.config.js --write .eslintrc.js config.js gulpfile.js webpack.config.js src/**/*.js",
     "dev-gulp": "gulp dev || true",
-    "dev-http-server": "http-server dist -c-1 -p 9923 -a 127.0.0.1 -s",
+    "dev-browsersync": "browser-sync start --ss dist --port 9924 -w --host 127.0.0.1 --logLevel error --no-notify --no-open --no-ui --no-online --no-ghost-mode || true",
+    "dev-echo-server": "echo '\n\nbrowsersync dev server http://127.0.0.1:9924\n\n'",
     "dev": "run-p dev-*",
     "prd-gulp": "NODE_ENV=production gulp prd",
     "prd": "run-s prd-*"
-  }
+  },
+  "devDependencies": {}
 }

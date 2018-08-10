@@ -8,7 +8,6 @@ https://webpack.js.org/configuration
 */
 
 let path = require('path')
-let webpack = require('webpack')
 let UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin')
 let env = process.env.NODE_ENV
 let dev = env === 'development'

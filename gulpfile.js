@@ -1,4 +1,5 @@
 let gulp = require('gulp')
+let gutil = require('gulp-util')
 let autoprefixer = require('gulp-autoprefixer')
 let cssnano = require('gulp-cssnano')
 let gulpIf = require('gulp-if')
@@ -7,7 +8,6 @@ let stylus = require('gulp-stylus')
 let sourcemaps = require('gulp-sourcemaps')
 let ejs = require('gulp-ejs')
 let htmlmin = require('gulp-htmlmin')
-let run = require('gulp-run')
 let rename = require('gulp-rename')
 let {NODE_ENV} = process.env
 let dev = NODE_ENV === 'development'
@@ -44,7 +44,7 @@ gulp.task('stylus', () =>
     .pipe(gulp.dest('dist'))
 )
 
-gulp.task('pre-webpack', done => {
+gulp.task('webpack-init', done => {
   webpack = require('webpack')
   bundlerConfig = require('./webpack.config')
   bundler = webpack(bundlerConfig)
@@ -54,7 +54,7 @@ gulp.task('pre-webpack', done => {
 gulp.task('webpack', done => {
   bundler.run(err => {
     if (err !== null && err !== undefined) {
-      console.error('error bundling', err)
+      gutil.log.error('error bundling', err)
     }
     done()
   })
@@ -91,8 +91,8 @@ gulp.task('dev', [
   'static-copy',
   'stylus',
   'ejs',
-  'pre-webpack',
+  'webpack-init',
   'webpack',
   'watch'
 ])
-gulp.task('prd', ['static-copy', 'stylus', 'ejs', 'pre-webpack', 'webpack'])
+gulp.task('prd', ['static-copy', 'stylus', 'ejs', 'webpack-init', 'webpack'])
