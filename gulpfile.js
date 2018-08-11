@@ -18,7 +18,7 @@ let bundlerConfig
 let bundler
 
 let patterns = {
-  static: 'src/**/*.{ico,png,svg}',
+  static: 'src/**/*.{ico,png,svg,jpg}',
   styl: 'src/**/*.styl',
   js: 'src/**/*.js',
   ejs: 'src/**/*.ejs'
