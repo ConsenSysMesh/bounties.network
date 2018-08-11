@@ -21,19 +21,21 @@
     color white
 
 .watercolor-btn
-  display block
+  display flex
+  align-items center
   height 100px
   width 100px
   background white
+  background-blend-mode soft-light, normal
   border 1px solid #e0e0e0
   border-radius 20px
   text-align center
-  line-height 100px
   transform rotate(45deg)
-  margin 50px
+  margin 0 50px
   transition all 0.25s ease-in-out
   box-shadow 2px 2px 4px 0px #e0e0e0
   .link
+    margin auto
     display block
     color blue
     text-decoration none
@@ -45,3 +47,12 @@
     .link
       transform rotate(-90deg)
       color white
+
+.watercolor-btn.blue:hover
+  background url(/img/watercolor.jpg), radial-gradient(171.62px at 34.36% 92.67%, #2362C1 0%, #79ABF4 100%)
+
+.watercolor-btn.red:hover
+  background url(/img/watercolor.jpg), linear-gradient(57.09deg, #BA2B2B -10.99%, #DC7F7F 157.03%)
+
+.watercolor-btn.purple:hover
+  background url(/img/watercolor.jpg), radial-gradient(36.17px at 39.53% 25.88%, #653DD7 0%, #7A50F3 0.01%, #4B28AE 100%)

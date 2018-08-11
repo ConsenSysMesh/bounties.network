@@ -1,3 +1,54 @@
 
 #bn-building-blocks
-  //
+  background-color #F6F5F9
+  margin-top 80px
+  padding-top 80px
+
+#bn-building-blocks-description
+  headings()
+
+#bn-building-blocks-points
+  margin-top 250px
+  padding 0 $spacing-large
+
+#bn-building-blocks
+  .bb-subsection2
+    margin-top 4rem
+    .bb-point-title
+      display flex
+      align-items flex-end
+      h3
+        position relative
+        left -20px
+    .bb-description-link
+      display flex
+      p
+        margin-left 140px
+  .bb-mobile-link
+    display none
+
+@media screen and (max-width: 760px)
+  #bn-building-blocks-description
+  #bn-building-blocks-points
+    max-width 80%
+    flex-basis 90%
+    margin auto
+
+  #bn-building-blocks-points
+    .bb-point-title
+      align-items center !important
+      h3
+        position unset !important
+        margin $spacing-large
+    .bb-description-link
+      flex-direction column
+      p
+        flex 1
+        margin-left 0 !important
+    .watercolor-btn
+      display none
+    .bb-mobile-link
+      display block
+      flex 1
+
+
