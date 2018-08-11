@@ -1,23 +1,27 @@
 
 #bn-building-blocks
+  headings()
   background-color #F6F5F9
   margin-top 80px
   padding-top 80px
+  p
+    ui-fonts()
 
-#bn-building-blocks-description
-  headings()
 
 #bn-building-blocks-points
   margin-top 250px
   padding 0 $spacing-large
-
-#bn-building-blocks
   .bb-subsection2
     margin-top 4rem
     .bb-point-title
       display flex
       align-items flex-end
+      .point-number
+        flex 0.25
+        img
+          width 99%
       h3
+        flex 0.75
         position relative
         left -20px
     .bb-description-link
@@ -31,12 +35,16 @@
   #bn-building-blocks-description
   #bn-building-blocks-points
     max-width 80%
-    flex-basis 90%
+    flex-basis 80%
     margin auto
 
   #bn-building-blocks-points
     .bb-point-title
       align-items center !important
+      .point-number
+        flex 0.4 !important
+        img
+          width 99%
       h3
         position unset !important
         margin $spacing-large
