@@ -12,7 +12,7 @@ let rename = require('gulp-rename')
 let {NODE_ENV} = process.env
 let dev = NODE_ENV === 'development'
 let prd = NODE_ENV === 'production'
-let config = require('./config')
+let config = require('./src/data/config')
 let webpack
 let bundlerConfig
 let bundler
