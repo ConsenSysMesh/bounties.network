@@ -1,14 +1,10 @@
 
-#bn-building-blocks
-  headings()
+#building-blocks
   background-color #F6F5F9
   margin-top 80px
   padding-top 80px
-  p
-    ui-fonts()
 
-
-#bn-building-blocks-points
+#building-blocks-points
   margin-top 250px
   padding 0 $spacing-large
   .bb-subsection2
@@ -31,14 +27,21 @@
   .bb-mobile-link
     display none
 
+
+// push the video down in desktop mode
+@media screen and (min-width: 760px)
+  #benefits-video-outer
+    position relative
+    top 180px
+
 @media screen and (max-width: 760px)
-  #bn-building-blocks-description
-  #bn-building-blocks-points
+  #building-blocks-description
+  #building-blocks-points
     max-width 80%
     flex-basis 80%
     margin auto
 
-  #bn-building-blocks-points
+  #building-blocks-points
     .bb-point-title
       align-items center !important
       .point-number

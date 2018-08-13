@@ -6,7 +6,7 @@
 
 #intro
   position relative
-  headings()
+  margin-top 100px
 
 .intro-floating-image
   display none
@@ -15,29 +15,21 @@
 
 // top left hex icon with background mobile
 #intro-mobile-top-left-hexagon
-  top 1.6rem
-  left -40px
-  width 150px
-  height 150px
+  top 30px
 
 // top left light purple glow mobile
 #intro-mobile-top-left-purple-light
-  top 3.7rem
-  left 40px
-  width 200px
-  height 200px
+  top 100px
+  left 60px
 
 // bottom left small bee mobile
 #intro-mobile-bottom-left-bee
   bottom -110px
   left 100px
-  width 80px
 
-#intro-mobile-bottom-left-hexagon
+#intro-mobile-bottom-left-circle
   bottom -30px
   left 60px
-  width 18px
-  height 18px
 
 #intro-mobile-bottom-right-hexagons
   bottom 30px
@@ -65,7 +57,6 @@
   p
     font-size 1.2rem
     margin-bottom 3rem
-    color #403656
   .btn
     display inline-block
     margin $spacing-medium
@@ -82,13 +73,11 @@
 
   #intro-hexagons-right
     // top 20%
-    height 700px
+    width 500px
 
 @media screen and (max-width: 1020px)
   #intro-hexagons-right
-    // top 28%
-    // width 380px
-    height 600px
+    width 400px
 
 @media screen and (max-width: 760px)
   #intro-description
@@ -104,7 +93,7 @@
   #intro-mobile-top-left-hexagon
   #intro-mobile-top-left-purple-light
   #intro-mobile-bottom-left-bee
-  #intro-mobile-bottom-left-hexagon
+  #intro-mobile-bottom-left-circle
   #intro-mobile-bottom-right-hexagons
   #intro-mobile-bottom-right-hexagon-bee
     display block
