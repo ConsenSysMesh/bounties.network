@@ -1,6 +1,10 @@
-let {NODE_ENV} = process.env
-let dev = NODE_ENV === 'development'
-let prd = NODE_ENV === 'production'
+/*
+
+Partners list at the bottom in a carousel.
+
+See ./src/index.ejs
+
+*/
 
 let partners = [
   {
@@ -45,9 +49,4 @@ let partners = [
   }
 ]
 
-let opts = {
-  dev,
-  prd
-}
-
-module.exports = opts
+module.exports = partners

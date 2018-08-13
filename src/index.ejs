@@ -47,26 +47,26 @@
   <meta property="og:image" content="https://bounties.network/images/twitter.png" />
   <meta property="og:description" content="Bounties on any task, easily paid in ETH or ERC20 tokens" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-icon-180x180.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/img/icons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">
 
-  <link rel="icon" sizes="192x192"  href="/img/icons/android-icon-192x192.png">
-  <link rel="icon" sizes="144x144"  href="/img/icons/android-icon-144x144.png">
-  <link rel="icon" sizes="96x96"  href="/img/icons/android-icon-96x96.png">
-  <link rel="icon" sizes="72x72"  href="/img/icons/android-icon-72x72.png">
-  <link rel="icon" sizes="48x48"  href="/img/icons/android-icon-48x48.png">
-  <link rel="icon" sizes="36x36"  href="/img/icons/android-icon-36x36.png">
+  <link rel="icon" sizes="192x192"  href="/img/favicons/android-icon-192x192.png">
+  <link rel="icon" sizes="144x144"  href="/img/favicons/android-icon-144x144.png">
+  <link rel="icon" sizes="96x96"  href="/img/favicons/android-icon-96x96.png">
+  <link rel="icon" sizes="72x72"  href="/img/favicons/android-icon-72x72.png">
+  <link rel="icon" sizes="48x48"  href="/img/favicons/android-icon-48x48.png">
+  <link rel="icon" sizes="36x36"  href="/img/favicons/android-icon-36x36.png">
 
-  <link rel="icon" sizes="32x32" href="/img/icons/favicon-32x32.png">
-  <link rel="icon" sizes="96x96" href="/img/icons/favicon-96x96.png">
-  <link rel="icon" sizes="16x16" href="/img/icons/favicon-16x16.png">
+  <link rel="icon" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+  <link rel="icon" sizes="96x96" href="/img/favicons/favicon-96x96.png">
+  <link rel="icon" sizes="16x16" href="/img/favicons/favicon-16x16.png">
 
   <link rel="stylesheet" href="/index.css">
 </head>
@@ -333,12 +333,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
-    <% if (prd === true) { %>
-    <div class="row">
-      <div id="benefits-video-outer" class="col-xs-12 center-xs">
+    <% if (dev === true) { %>
+    <div class="row middle-xs center-xs">
+      <div id="benefits-video-outer" class="col-xs-9">
         <iframe id="benefits-video-inner"
-          width="600"
-          height="300"
+           width="560"
+           height="315"
           src="https://www.youtube.com/embed/P79AXOFAbgU?rel=0"
           frameborder="0"
           allow="autoplay; encrypted-media"
@@ -364,6 +364,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           orgnizations across the globe, whose values and goals
           align with ours.
         </p>
+      </div>
+    </div>
+    <div class="row middle-xs">
+      <div class="col-xs-1 center-xs">
+        <div id="partnerships-organizations-prev"
+          class="partnerships-arrow-left">
+          &lsaquo;
+        </div>
+      </div>
+      <div class="col-xs-10">
+        <div id="partnerships-organizations-carousel" class="carousel-outer">
+          <% partners.forEach(function(item) { %>
+            <div class="carousel-item carousel-organization-item">
+              <a href="<%=item.websiteUrl%>">
+                <img class="carousel-organization-img"
+                  src="<%=item.imageUrl%>"
+                  alt="<%=item.title%>">
+              </a>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+      <div class="col-xs-1 center-xs">
+        <div id="partnerships-organizations-next"
+          class="partnerships-arrow-right">
+          &rsaquo;
+        </div>
+      </div>
+    </div>
+    <div class="row middle-xs">
+      <div class="col-xs-1 center-xs">
+        <div id="partnerships-media-prev" class="partnerships-arrow-left">
+          &lsaquo;
+        </div>
+      </div>
+      <div class="col-xs-10">
+        <div id="partnerships-media-carousel" class="carousel-outer">
+          <% media.forEach(function(item) { %>
+            <div class="carousel-item carousel-media-item">
+              <a href="<%=item.websiteUrl%>">
+                <div class="carousel-media-heading">
+                  <img class="carousel-media-icon" src="<%=item.iconUrl%>" alt="">
+                  <div class="carousel-media-link"><%=item.title%></div>
+                </div>
+                <img class="carousel-media-img" src="<%=item.imageUrl%>" alt="<%=item.title%>">
+              </a>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+      <div class="col-xs-1 center-xs">
+        <div id="partnerships-organizations-next"
+          class="partnerships-arrow-right">
+          &rsaquo;
+        </div>
       </div>
     </div>
   </div>

@@ -12,7 +12,7 @@ let rename = require('gulp-rename')
 let {NODE_ENV} = process.env
 let dev = NODE_ENV === 'development'
 let prd = NODE_ENV === 'production'
-let config = require('./src/data/config')
+let ejsData = require('./src/data')
 let webpack
 let bundlerConfig
 let bundler
@@ -64,7 +64,7 @@ gulp.task('ejs', () =>
   gulp
     .src('src/index.ejs')
     .pipe(plumber())
-    .pipe(ejs(config))
+    .pipe(ejs(ejsData))
     .pipe(
       gulpIf(
         prd,
