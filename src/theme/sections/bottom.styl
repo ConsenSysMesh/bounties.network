@@ -3,6 +3,7 @@
   margin-top 4rem
   font-size 0.8rem
   padding 2rem
+
   .bottom-link-outer
     line-height 2rem
     display flex
@@ -11,6 +12,7 @@
     a
       flex 1
       color #949494
+
   .bottom-link-title
     ui-fonts()
     font-weight bold
@@ -46,3 +48,14 @@
 @media screen and (min-width: 1020px)
   #mc-embedded-subscribe-form
     margin-top 120px
+
+@media screen and (max-width: 400px)
+  #bottom
+    padding 1rem
+
+  .bottom-link-outer
+    line-height 1rem
+
+  #mce-email
+  #mc-embedded-subscribe
+    max-width 60%
