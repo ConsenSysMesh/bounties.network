@@ -31,8 +31,8 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "eslint": "eslint --cache --fix gulpfile.js config.js prettier.config.js webpack.config.js src || true",
-    "prettier": "prettier --config prettier.config.js --write .eslintrc.js config.js gulpfile.js webpack.config.js src/**/*.js",
+    "eslint": "eslint --cache --fix gulpfile.js prettier.config.js webpack.config.js src || true",
+    "prettier": "prettier --config prettier.config.js --write .eslintrc.js gulpfile.js webpack.config.js src/**/*.js",
     "dev-gulp": "gulp dev || true",
     "dev-browsersync": "browser-sync start --ss dist --port 9924 -w --host 127.0.0.1 --logLevel error --no-notify --no-open --no-ui --no-online --no-ghost-mode || true",
     "dev-echo-server": "echo '\n\nbrowsersync dev server http://127.0.0.1:9924\n\n'",

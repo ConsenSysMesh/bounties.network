@@ -104,17 +104,34 @@ function carousel(opts) {
     }
 
     let item = items[cursor]
-    let rightDelta = parent.offsetWidth - parent.scrollLeft
     let position = item.offsetLeft - parent.offsetLeft
 
-    if (rightDelta < 0 && direction === 'next' && cursor !== cursorMin) {
-      position = position + rightDelta
-      cursor = cursorMax
+    let lastItem = items[cursorMax]
+
+    let lastItemRight =
+      lastItem.offsetLeft +
+      lastItem.offsetWidth -
+      parent.offsetWidth -
+      parent.offsetLeft -
+      parent.scrollLeft
+
+    if (lastItemRight < 10 && direction === 'next') {
+      // help it go from last to first
+      position = 0
+      cursor = 0
+    }
+
+    if (
+      direction === 'prev' &&
+      parent.scrollLeft > 10 &&
+      position > parent.scrollLeft
+    ) {
+      // help it go first to last
+      cursor -= 1
+      return rotate({direction: 'prev'})
     }
 
     scrollTo(position)
-
-    return {rightDelta, position}
   }
 
   function rotateNext() {
@@ -138,14 +155,12 @@ function carousel(opts) {
   function movePrev() {
     delayRotateNext()
     cursor -= 1
-    let {rightDelta, position} = rotate({direction: 'prev'})
-    if (rightDelta < 0) {
-      parent.scroll(position, 0)
-      movePrev()
-    }
+    rotate({direction: 'prev'})
   }
 
   parent.addEventListener('mousemove', delayRotateNext)
+  parent.addEventListener('mousein', delayRotateNext)
+  parent.addEventListener('mouseout', delayRotateNext)
   parent.addEventListener('scroll', delayRotateNext)
 
   items.forEach(item => {
@@ -186,7 +201,7 @@ function window_resize() {
   }
   let width = videoParent.offsetWidth
   video.setAttribute('width', width)
-  video.setAttribute('height', width / 560 * 315)
+  video.setAttribute('height', (width / 560) * 315)
 }
 
 window.addEventListener('load', window_load)
