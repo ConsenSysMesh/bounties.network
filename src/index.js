@@ -6,8 +6,8 @@ bounties.network
 
 let video
 let videoParent
-let longPause = 3000
-let shortPause = 1000
+let longPause = 10000
+let shortPause = 3000
 
 /**
  * Get one element by it's selector
