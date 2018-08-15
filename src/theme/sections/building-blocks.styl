@@ -1,0 +1,65 @@
+
+#building-blocks
+  background-color #F6F5F9
+  margin-top 80px
+  padding 80px 0
+
+#building-blocks-points
+  margin-top 250px
+  padding 0 $spacing-large
+  .bb-subsection2
+    margin-top 4rem
+    .bb-point-title
+      display flex
+      align-items flex-end
+      .point-number
+        flex 0.25
+        img
+          width 99%
+      h3
+        flex 0.75
+        position relative
+        left -20px
+    .bb-description-link
+      display flex
+      p
+        margin-left 140px
+  .bb-mobile-link
+    display none
+
+
+// push the video down in desktop mode
+@media screen and (min-width: 760px)
+  #benefits-video-outer
+    position relative
+    top 180px
+
+@media screen and (max-width: 760px)
+  #building-blocks-description
+  #building-blocks-points
+    max-width 80%
+    flex-basis 80%
+    margin auto
+
+  #building-blocks-points
+    .bb-point-title
+      align-items center !important
+      .point-number
+        flex 0.4 !important
+        img
+          width 99%
+      h3
+        position unset !important
+        margin $spacing-large
+    .bb-description-link
+      flex-direction column
+      p
+        flex 1
+        margin-left 0 !important
+    .watercolor-btn
+      display none
+    .bb-mobile-link
+      display block
+      flex 1
+
+
