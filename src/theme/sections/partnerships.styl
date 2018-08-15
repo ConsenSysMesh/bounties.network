@@ -1,0 +1,128 @@
+
+#partnerships
+  background-color #F6F5F9
+
+  #partnerships-title
+    display flex
+
+#partnerships-organizations-carousel
+#partnerships-media-carousel
+  padding 3rem 0
+
+.partnerships-arrow-left
+.partnerships-arrow-right
+  ui-fonts()
+  font-size 66px
+  color #E1DEE8
+  cursor pointer
+  margin-top -28px
+  background-color transparent
+  border none
+  outline none
+  &:hover
+    color $color-link
+
+//
+// carousel generic styles
+//
+
+.carousel-outer
+  display flex
+  overflow auto
+  align-items center
+  width 100%
+  &.hide-scrollbars
+    overflow hidden !important
+
+.carousel-item
+  display block
+  margin-right 2rem
+
+//
+// carousel partner organizations styles
+//
+
+.carousel-organization-item
+  // width 25%
+  min-width 25%
+  // max-width 25%
+
+.carousel-organization-img
+  display block
+  margin auto
+  height 65px
+  filter: grayscale(100%)
+  transition filter 0.3s
+  &:hover
+    filter: grayscale(0%)
+
+
+//
+// carousel media link-cards
+//
+
+.carousel-media-item
+  padding-top $spacing-large
+  min-width 31%
+  margin-right 1.7rem
+  background-color white
+  box-shadow 2px 0 2px rgba(0, 0, 0, 0.05)
+  justify-items center
+
+.carousel-media-heading
+  padding $spacing-large
+  font-size 0.8rem
+  border-bottom 1px solid #EEEEEE
+
+.carousel-media-icon
+  width 33px
+  height 33px
+  margin-bottom $spacing-large
+
+.carousel-media-img
+  width 100%
+
+// push the heading down in desktop mode
+@media screen and (min-width: 760px)
+  #partnerships
+    padding 300px 0 200px 0
+
+// medium
+@media screen and (max-width: 1020px)
+  .carousel-organization-item
+    min-width 35%
+
+  .carousel-media-item
+    min-width 50%
+
+// phone or tablet
+@media screen and (max-width: 760px)
+  #partnerships
+    padding 80px 0
+
+  .carousel-organization-item
+    min-width 50%
+
+  .carousel-media-item
+    min-width 50%
+
+// phone small
+@media screen and (max-width: 400px)
+  #partnerships
+    padding 50px 0
+
+  .col-xs-1
+    display none
+
+  .carousel-outer
+    padding $spacing-large
+    margin auto
+
+  .carousel-organization-item
+    min-width 50%
+
+  .carousel-organization-img
+    height 40px
+
+  .carousel-media-item
+    min-width 90%

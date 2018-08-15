@@ -1,0 +1,80 @@
+
+//
+// top menu, links, and hamburger
+//
+
+#top-menu-outer
+  ui-fonts()
+  border-bottom 1px solid $color-sep
+  position fixed
+  top 0
+  left 0
+  right 0
+  background-color rgba(255, 255, 255, 0.95)
+  z-index 300
+
+#top-menu-logo
+  display flex
+  margin $spacing-medium $spacing-large
+
+#top-menu-links
+  display flex
+  a
+    color rgb(168, 168, 168)
+    text-decoration none
+    border-color transparent
+    border-style solid
+    border-width 0 0 4px 0
+    padding $spacing-large $spacing-small
+    margin-left $spacing-large
+    font-size 85%
+    white-space nowrap
+    &.active
+      color $color-link
+      border-color #4a93ff
+
+#top-menu-toggler
+#top-menu-checkbox
+  display none
+
+#top-menu-toggler
+  cursor pointer
+  color $color-link
+  &>div
+    justify-self flex-end
+    margin-left auto
+    margin-right 2rem
+  .line
+    height 1px
+    border-bottom 2px solid $color-link
+    margin-bottom 2px
+    width 19px
+
+// mobile mode expanding-collapsing hamburger
+@media screen and (max-width: 760px)
+  #top-menu-toggler
+    display flex
+
+  #top-links-outer
+    width 100%
+    max-width 100%
+    flex-basis 100%
+
+  #top-menu-links
+    margin-right 1rem
+    height 0px
+    overflow hidden
+    transition height 0.3s
+    flex-direction column
+    a
+      border none
+
+  //
+  // there are two checkboxes named #top-menu-checkbox
+  //
+
+  // div is adjacent #top-menu-links
+  #top-menu-checkbox:checked ~ div
+    display flex
+    height 220px
+    opacity 1
