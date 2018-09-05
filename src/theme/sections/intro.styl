@@ -55,13 +55,16 @@
   z-index 200
   flex-direction column
   p
+    color #403656
     font-size $base-font-size
     line-height 1.75rem;
     margin-bottom 3rem
   .btn
     display inline-block
-    margin $spacing-medium
     flex 1
+
+    &:not(:last-child)
+      margin-right $m-spacing
 
 @media screen and (max-width: 1199px)
   #intro-hexagons-right

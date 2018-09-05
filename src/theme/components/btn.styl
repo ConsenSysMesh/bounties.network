@@ -4,21 +4,28 @@
 //
 
 .btn
-  padding 0.8rem 1.6rem
+  padding $m-spacing $l-spacing
   text-decoration none
   border-radius 3px
-  font-size 0.9rem
+  font-size $body-font-size
   white-space nowrap
   img
-    margin-right $spacing-small
+    margin-right ($m-spacing / 1.5)
     height 1rem
   &.white
     background-color white
     border 1px solid #E0E0E0
     color #262626
+
+    &:hover
+      border-color darken(#E0E0E0, 15%)
+
   &.orange
     background-color #FBAA31
     color white
+
+    &:hover
+      background-color darken(#FBAA31, 15%)
 
 .watercolor-btn
   display flex
