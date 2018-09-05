@@ -72,22 +72,28 @@
 //
 
 .carousel-media-item
+  border-radius 3px
   padding-top $spacing-large
   min-width 31%
-  margin-right 1.7rem
+  margin-right $m-spacing
   background-color white
-  box-shadow 2px 0 2px rgba(0, 0, 0, 0.05)
   justify-items center
 
 .carousel-media-heading
-  padding $spacing-large
-  font-size 0.8rem
+  color #403656
+  line-height 1.25
+  padding $l-spacing
+  font-size $h4-font-size
   border-bottom 1px solid #EEEEEE
+
+  &:hover
+    color #4A93FF
+    text-decoration underline
 
 .carousel-media-icon
   width 33px
   height 33px
-  margin-bottom $spacing-large
+  margin-bottom $m-spacing
 
 .carousel-media-img
   width 100%
