@@ -66,6 +66,7 @@ ui-fonts()
 //
 html
   font-size $base-font-size
+  box-sizing border-box
 
 body
   background-color $color-background
@@ -90,6 +91,13 @@ a
     line-height 1.5rem
     font-size $body-font-size
   headings()
+
+.page-container {
+  margin 0 auto
+  max-width 75rem
+  padding 0 $l-spacing
+  position relative
+}
 
 //
 // components
