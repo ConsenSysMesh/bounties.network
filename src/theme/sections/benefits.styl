@@ -14,7 +14,15 @@
       display flex
       margin auto
 
-// put a little space under the video in mobile
-@media screen and (max-width: 760px)
-  iframe
-    margin-bottom 3rem
+.video-wrapper
+  position relative
+  transform translateY(50%)
+  width 100%
+  margin 0 auto
+
+  @media screen and (min-width: 35em)
+    margin-top -100px
+
+#benefits-video-outer
+  margin 0 auto
+  max-width 800px

@@ -4,21 +4,28 @@
 //
 
 .btn
-  padding 0.8rem 1.6rem
+  padding $m-spacing $l-spacing
   text-decoration none
   border-radius 3px
-  font-size 0.9rem
+  font-size $body-font-size
   white-space nowrap
   img
-    margin-right $spacing-small
+    margin-right ($m-spacing / 1.5)
     height 1rem
   &.white
     background-color white
     border 1px solid #E0E0E0
     color #262626
+
+    &:hover
+      border-color darken(#E0E0E0, 15%)
+
   &.orange
     background-color #FBAA31
     color white
+
+    &:hover
+      background-color darken(#FBAA31, 15%)
 
 .watercolor-btn
   display flex
@@ -27,8 +34,8 @@
   width 100px
   background white
   background-blend-mode soft-light, normal
-  border 1px solid #e0e0e0
-  border-radius 20px
+  border-radius 30px
+  font-size $body-font-size
   text-align center
   transform rotate(45deg)
   margin 0 50px
@@ -37,7 +44,6 @@
   .link
     margin auto
     display block
-    color blue
     text-decoration none
     transform rotate(-45deg)
     transition all 0.25s ease-in-out
@@ -49,10 +55,10 @@
       color white
 
 .watercolor-btn.blue:hover
-  background url(/img/watercolor.jpg), radial-gradient(171.62px at 34.36% 92.67%, #2362C1 0%, #79ABF4 100%)
+  background url(/img/watercolor.jpg), #2362C1
 
 .watercolor-btn.red:hover
-  background url(/img/watercolor.jpg), linear-gradient(57.09deg, #BA2B2B -10.99%, #DC7F7F 157.03%)
+  background url(/img/watercolor.jpg), #BA2B2B
 
 .watercolor-btn.purple:hover
-  background url(/img/watercolor.jpg), radial-gradient(36.17px at 39.53% 25.88%, #653DD7 0%, #7A50F3 0.01%, #4B28AE 100%)
+  background url(/img/watercolor.jpg), #653DD7
