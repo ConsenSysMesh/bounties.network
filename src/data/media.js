@@ -8,6 +8,13 @@ It's used at the bottom of ./src/index.ejs
 
 let media = [
   {
+    title: 'BRLNCoin: Eine Kryptowährung zum Üben',
+    iconUrl: './img/social/BerlinValley.png',
+    imageUrl: './img/media/brlncoin.jpg',
+    websiteUrl:
+      'https://berlinvalley.com/brlncoin-kryptowaehrung-berlin/'
+  },
+  {
     title: 'ConsenSys Bounties Network Simona Pop on Building a World on Bounties',
     iconUrl: './img/social/coincentral.png',
     imageUrl: './img/media/coincentral.png',
