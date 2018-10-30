@@ -25,12 +25,12 @@ let patterns = {
 }
 
 gulp.task('static-copy', () =>
-  gulp.src(['src/{img,fonts}/**', 'favicon.ico']).pipe(gulp.dest('dist'))
+  gulp.src(['src/{img,fonts}/**']).pipe(gulp.dest('dist'))
 )
 
 gulp.task('stylus', () =>
   gulp
-    .src('src/index.styl')
+    .src('src/styles/*.styl')
     .pipe(plumber())
     .pipe(gulpIf(dev, sourcemaps.init()))
     .pipe(
@@ -41,7 +41,7 @@ gulp.task('stylus', () =>
     .pipe(autoprefixer())
     .pipe(gulpIf(prd, cssnano()))
     .pipe(gulpIf(dev, sourcemaps.write('.')))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist/styles'))
 )
 
 gulp.task('webpack-init', done => {
@@ -62,7 +62,7 @@ gulp.task('webpack', done => {
 
 gulp.task('ejs', () =>
   gulp
-    .src('src/index.ejs')
+    .src('src/*.ejs')
     .pipe(plumber())
     .pipe(ejs(ejsData))
     .pipe(
@@ -76,7 +76,7 @@ gulp.task('ejs', () =>
         })
       )
     )
-    .pipe(rename('index.html'))
+    .pipe(rename({extname: '.html'}))
     .pipe(gulp.dest('dist'))
 )
 
