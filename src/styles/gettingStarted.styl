@@ -1,0 +1,36 @@
+
+// https://flexboxgrid.com/
+@require '../../node_modules/flexboxgrid/dist/flexboxgrid.css'
+
+//
+// common config
+//
+@import '../theme/common'
+
+
+#intro
+#bottom
+  p, a
+    ui-fonts()
+  p
+    color #75727C
+    line-height 1.5rem
+    font-size $body-font-size
+  headings()
+  margin 0 auto
+  max-width 75rem
+  padding 0 $l-spacing
+  position relative
+
+//
+// components
+//
+@import '../theme/components/btn'
+
+//
+// content sections
+//
+@import '../theme/sections/top-menu'
+@import '../theme/sections/gs-description'
+@import '../theme/sections/gs-std-section'
+@import '../theme/sections/bottom'

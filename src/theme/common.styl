@@ -1,0 +1,85 @@
+//
+// common configuration
+//
+$color-background = #FFFFFF
+$color-sep = rgb(224, 224, 224)
+$color-link = #4a93ff
+
+// SPACING (Based on an 8pt scale)
+$base-spacing = 0.5rem // 8px
+$s-spacing = $base-spacing / 2 // 4px
+$m-spacing = $base-spacing * 2 // 16px
+$l-spacing = $base-spacing * 3 // 24px
+$xl-spacing = $base-spacing * 4 // 32px
+$xxl-spacing = $base-spacing * 5 // 40px
+
+// TYPOGRAPHY
+$base-font-size = 16px
+$body-small-font-size = 0.75rem // 12px
+$body-medium-font-size = 1.25rem // 20px
+$body-font-size = 0.875rem // 14px
+
+$h5-font-size = 1rem // 16px
+$h4-font-size = 1.125rem // 18px
+$h3-font-size = 1.375rem // 22px
+$h2-font-size = 2rem // 32px
+$h1-font-size = 2.8125rem // 45px
+
+// BORDERS
+$small-border-radius = 0.25em //4px
+
+//
+// fonts
+//
+@font-face
+  font-family poppins
+  src url(../fonts/poppins-regular.ttf)
+
+@font-face
+  font-family inter-ui
+  src url(../fonts/inter-ui-regular.woff2) format('woff2'),
+     url(../fonts/inter-ui-regular.ttf) format('ttf'),
+     url(../fonts/inter-ui-regular.otf) format('otf')
+
+headings()
+  h1, h2, h3, h4, h5, h6
+    font-family poppins
+    color #403656
+  h1
+    font-size $h1-font-size
+    line-height 1.25
+  h2
+    font-size $h2-font-size
+    line-height 1.35
+  h3
+    font-size $h3-font-size
+  .emphasis
+    color #7F4CEE
+
+ui-fonts()
+  font-family inter-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif
+
+//
+// global / tag level modifications
+//
+html
+  font-size $base-font-size
+  box-sizing border-box
+
+body
+  background-color $color-background
+  margin 0
+
+img
+  vertical-align middle
+
+a
+  text-decoration none
+  color #4A93FF
+
+.page-container {
+  margin 0 auto
+  max-width 75rem
+  padding 0 $l-spacing
+  position relative
+}

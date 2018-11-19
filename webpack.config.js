@@ -12,8 +12,8 @@ let UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin')
 let env = process.env.NODE_ENV
 let dev = env === 'development'
 let prd = env === 'production'
-let entryPath = path.join(__dirname, 'src', 'index.js')
-let outputPath = path.join(__dirname, 'dist')
+let entryPath = path.join(__dirname, 'src/scripts')
+let outputPath = path.join(__dirname, 'dist/scripts')
 
 if (env !== 'development') {
   env = 'production'
@@ -23,10 +23,12 @@ if (env !== 'development') {
 let opts = {
   target: 'web',
   mode: env,
-  entry: entryPath,
+  entry: {
+    index: path.join(entryPath, 'index.js')
+  },
   output: {
     path: outputPath,
-    filename: 'index.js'
+    filename: '[name].js'
   },
   module: {
     rules: [

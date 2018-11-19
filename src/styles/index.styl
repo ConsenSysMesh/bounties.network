@@ -1,0 +1,38 @@
+
+// https://flexboxgrid.com/
+@require '../../node_modules/flexboxgrid/dist/flexboxgrid.css'
+
+//
+// common config
+//
+@import '../theme/common'
+
+
+#intro
+#building-blocks
+#benefits
+#partnerships
+#bottom
+  p, a
+    ui-fonts()
+  p
+    color #75727C
+    line-height 1.5rem
+    font-size $body-font-size
+  headings()
+
+//
+// components
+//
+
+@import '../theme/components/btn'
+
+//
+// content sections
+//
+@import '../theme/sections/top-menu'
+@import '../theme/sections/intro'
+@import '../theme/sections/building-blocks'
+@import '../theme/sections/benefits'
+@import '../theme/sections/partnerships'
+@import '../theme/sections/bottom'
