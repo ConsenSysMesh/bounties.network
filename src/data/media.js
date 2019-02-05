@@ -9,7 +9,7 @@ It's used at the bottom of ./src/index.ejs
 let media = [
   {
     title: 'Ethereum Hackathon ETHDenver Partners With UNICEF on Bounty System',
-    iconUrl: './img/social/CoinTelegraphIcon.png',
+    iconUrl: './img/social/cointelegraphicon.png',
     imageUrl: './img/media/cointelegraph.png',
     websiteUrl:
       'https://cointelegraph.com/news/ethereum-hackathon-ethdenver-partners-with-unicef-on-blockchain-bounty-system'
