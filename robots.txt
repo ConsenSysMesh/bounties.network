@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://bounties.network/sitemap.xml
